@@ -14,16 +14,12 @@ var headerCheckHandler = function (event) {
 	}
 };
 document.getElementById("selectall").addEventListener('change', headerCheckHandler);
-//classList.toggle("content-hidden")
 
-var x = document.querySelectorAll(".toggle-card--content")
-for (var i = 0; i < x.length; i++) {
-	x[i].addEventListener('click', function (event) {
-		if (event.target.classList.contains("material-icons"))
-			event.target.parentElement.parentElement.parentElement.classList.toggle("content-hidden");
-		if (event.target.classList.contains("mdl-button") || (event.target.classList.contains("mdl-card__title-text")))
-			event.target.parentElement.parentElement.classList.toggle("content-hidden");
-		if (event.target.classList.contains("mdl-card__title"))
-			event.target.parentElement.classList.toggle("content-hidden");
-	});
+
+function toggleCard() {
+	this.parentElement.classList.toggle("content-hidden");
 }
+function attachToggler(element, index, array) {
+	element.addEventListener('click', toggleCard);
+}
+[].forEach.call(document.querySelectorAll(".toggle-card--content"), attachToggler);
