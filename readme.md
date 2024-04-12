@@ -48,54 +48,40 @@ Material Design Lite lets you add a Material Design look and feel to your websit
 
 # SVGNet.js
 
-SVGNet.js is a JavaScript library for creating and manipulating SVG (Scalable Vector Graphics) elements.
+SVGNet.js is a powerful JavaScript library that allows you to create and manipulate SVG elements in a simple and efficient way. 
 
 ## Features
 
-- Create SVG elements programmatically
-- Manipulate SVG elements (e.g., change attributes, add/remove children)
-- Support for SVG animations
+- Create SVG elements programmatically.
+- Manipulate SVG elements easily.
+- Lightweight and efficient.
+- Compatible with modern web browsers.
 
 ## Installation
 
-```bash
-npm install svgnet.js
+You can include SVGNet.js in your project by adding the following script tag to your HTML file:
+
+```html
+<script src="path/to/svgnet.js"></script>
 ```
 
 ## Usage
 
-First, import the library:
+Here is a basic example of how to use SVGNet.js:
 
 ```javascript
-const SVGNet = require('svgnet.js');
+// Create a new SVG element
+var svg = new SVGNet();
+
+// Add a circle to the SVG
+var circle = svg.createCircle(50, 50, 20);
+svg.append(circle);
+
+// Change the color of the circle
+circle.setFill('red');
 ```
 
-Then, you can create and manipulate SVG elements:
+## API Reference
 
-```javascript
-let svg = SVGNet.create('svg', {width: 500, height: 500});
-let circle = SVGNet.create('circle', {cx: 250, cy: 250, r: 100, fill: 'red'});
-svg.appendChild(circle);
-```
+For a detailed API reference, please refer to the source code (`svgnet.js`).
 
-## API
-
-### SVGNet.create(name, attributes)
-
-Creates a new SVG element with the given name and attributes.
-
-### SVGNet.prototype.appendChild(child)
-
-Adds a child element to this SVG element.
-
-### SVGNet.prototype.setAttribute(name, value)
-
-Sets the value of an attribute on this SVG element.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
