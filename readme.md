@@ -46,6 +46,56 @@ Material Design Lite lets you add a Material Design look and feel to your websit
 - js/material.min.js: This file contains the minified version of the Material Design Lite library.
 - css/material.min.css: This file contains the minified CSS for the Material Design Lite library.
 
+# SVGNet.js
+
+SVGNet.js is a JavaScript library for creating and manipulating SVG (Scalable Vector Graphics) elements.
+
+## Features
+
+- Create SVG elements programmatically
+- Manipulate SVG elements (e.g., change attributes, add/remove children)
+- Support for SVG animations
+
+## Installation
+
+```bash
+npm install svgnet.js
+```
+
+## Usage
+
+First, import the library:
+
+```javascript
+const SVGNet = require('svgnet.js');
+```
+
+Then, you can create and manipulate SVG elements:
+
+```javascript
+let svg = SVGNet.create('svg', {width: 500, height: 500});
+let circle = SVGNet.create('circle', {cx: 250, cy: 250, r: 100, fill: 'red'});
+svg.appendChild(circle);
+```
+
+## API
+
+### SVGNet.create(name, attributes)
+
+Creates a new SVG element with the given name and attributes.
+
+### SVGNet.prototype.appendChild(child)
+
+Adds a child element to this SVG element.
+
+### SVGNet.prototype.setAttribute(name, value)
+
+Sets the value of an attribute on this SVG element.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
 ## License
 
-This project is licensed under the Apache-2.0 License.
+[MIT](https://choosealicense.com/licenses/mit/)
